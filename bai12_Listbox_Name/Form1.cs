@@ -16,10 +16,11 @@ namespace bai12_Listbox_Name
         {
             InitializeComponent();
         }
+        List<string> ten = new List<string>();
 
         private void btnADD_Click(object sender, EventArgs e)
         {
-            lstNames.Items.Add(txtName.Text);
+            lstName.Items.Add(txtName.Text);
             txtName.Text = "";
             txtName.Focus();
 
@@ -27,8 +28,8 @@ namespace bai12_Listbox_Name
 
         private void btnEDIT_Click(object sender, EventArgs e)
         {
-            if (lstNames.SelectedIndex < 0)
-                lstNames.Items[lstNames.SelectedIndex] = txtName.Text;
+            if (lstName.SelectedIndex < 0)
+                lstName.Items[lstName.SelectedIndex] = txtName.Text;
             MessageBox.Show("Hãy chọn tên trong danh sách", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Question);
             return;
         }
@@ -36,13 +37,13 @@ namespace bai12_Listbox_Name
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lstNames.Items.Add("Trần Văn A");
-            lstNames.Items.Add("Trần Văn B");
-            lstNames.Items.Add("Trần Văn C");
-            lstNames.Items.Add("Trần Văn D");
-            lstNames.Items.Add("Trần Văn E");
-            lstNames.Items.Add("Trần Văn F");
-            lstNames.Items.Add("Trần Văn G");
+            lstName.Items.Add("Trần Văn A");
+            lstName.Items.Add("Trần Văn B");
+            lstName.Items.Add("Trần Văn C");
+            lstName.Items.Add("Trần Văn D");
+            lstName.Items.Add("Trần Văn E");
+            lstName.Items.Add("Trần Văn F");
+            lstName.Items.Add("Trần Văn G");
         }
 
         private void lstNames_SelectedIndexChanged(object sender, EventArgs e)
@@ -51,7 +52,21 @@ namespace bai12_Listbox_Name
             {
                 return;
             }
-            txtName.Text = lstNames.SelectedIndex.ToString();
+            txtName.Text = lstName.SelectedIndex.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ten.Add(txtName.Text);
+            ////
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (string x in ten)
+
+                lstName.Items.Add(x);
+            // Thêm ghi chú
         }
     }
 }

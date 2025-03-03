@@ -30,9 +30,11 @@
         {
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnADD = new System.Windows.Forms.Button();
-            this.lstNames = new System.Windows.Forms.ListBox();
+            this.lstName = new System.Windows.Forms.ListBox();
             this.btnEDIT = new System.Windows.Forms.Button();
             this.btnREMOVE = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtName
@@ -53,14 +55,14 @@
             this.btnADD.UseVisualStyleBackColor = false;
             this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
             // 
-            // lstNames
+            // lstName
             // 
-            this.lstNames.FormattingEnabled = true;
-            this.lstNames.Location = new System.Drawing.Point(38, 79);
-            this.lstNames.Name = "lstNames";
-            this.lstNames.Size = new System.Drawing.Size(240, 173);
-            this.lstNames.TabIndex = 2;
-            this.lstNames.SelectedIndexChanged += new System.EventHandler(this.lstNames_SelectedIndexChanged);
+            this.lstName.FormattingEnabled = true;
+            this.lstName.Location = new System.Drawing.Point(38, 79);
+            this.lstName.Name = "lstName";
+            this.lstName.Size = new System.Drawing.Size(240, 173);
+            this.lstName.TabIndex = 2;
+            this.lstName.SelectedIndexChanged += new System.EventHandler(this.lstNames_SelectedIndexChanged);
             // 
             // btnEDIT
             // 
@@ -83,13 +85,35 @@
             this.btnREMOVE.Text = "REMOVE";
             this.btnREMOVE.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(534, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(206, 43);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "THÊM VÀO LIST";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(534, 111);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(206, 43);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "THÊM VÀO LISTBOX";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lstNames);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lstName);
             this.Controls.Add(this.btnREMOVE);
             this.Controls.Add(this.btnEDIT);
             this.Controls.Add(this.btnADD);
@@ -106,8 +130,10 @@
 
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnADD;
-        private System.Windows.Forms.ListBox lstNames;
+        private System.Windows.Forms.ListBox lstName;
         private System.Windows.Forms.Button btnEDIT;
         private System.Windows.Forms.Button btnREMOVE;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
